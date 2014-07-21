@@ -13,3 +13,119 @@
  *= require_tree .
  *= require_self
  */
+
+$margin: 5%;
+
+section {
+	margin:0;
+}
+
+
+#slider {
+  height: 300px;
+
+	  img {
+	  width: 100%;
+	}
+}
+
+
+.margin {
+  margin: $margin 0;
+}
+
+.top-bar-section {
+  height: 90px;
+  background: rgba(26, 188, 156,.4);
+
+  ul {
+    background: rgba(26, 188, 156,1);
+  }
+}
+
+.top-bar {
+  background: rgba(26, 188, 156,1);
+
+  ul li {
+  	background: rgba(26, 188, 156,1)
+  }
+
+}
+
+  
+
+.fi-heart {
+  color: rgba(231, 76, 60,1);
+  font-size:1rem;
+  margin: 0 0 0 6px;
+}
+
+
+.side-nav li a:not(.button){
+  color:rgba(26, 188, 156,.8);
+  margin-left: 5%;
+  padding-left: 5%;
+}
+
+
+.side-nav li.green a:not(.button){
+  background:rgba(26, 188, 156,.8);
+  color: #fff;  
+  padding-left: 5%;
+  border-radius: 10px;
+}
+
+
+
+.uk-button {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+line-height: 28px;
+min-height: 30px;
+font-size: 1rem;
+padding: 0 12px;
+background: #f7f7f7;
+color: #666;
+border: 1px solid rgba(0,0,0,.2);
+border-bottom-color: rgba(0,0,0,.3);
+background-origin: border-box;
+background-image: -webkit-linear-gradient(top,#fff,#eee);
+background-image: linear-gradient(to bottom,#fff,#eee);
+border-radius: 4px;
+text-shadow: 0 1px 0 #fff;
+}
+
+.uk-button-primary {
+background-color: #009dd8;
+color: #fff;
+background-image: -webkit-linear-gradient(top,#00b4f5,#008dc5);
+background-image: linear-gradient(to bottom,#00b4f5,#008dc5);
+border-color: rgba(0,0,0,.2);
+border-bottom-color: rgba(0,0,0,.4);
+text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+.uk-button-success {
+background-color: #82bb42;
+color: #fff;
+background-image: -webkit-linear-gradient(top,#9fd256,#6fac34);
+background-image: linear-gradient(to bottom,#9fd256,#6fac34);
+border-color: rgba(0,0,0,.2);
+border-bottom-color: rgba(0,0,0,.4);
+text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+.uk-button-danger {
+background-color: #d32c46;
+color: #fff;
+background-image: -webkit-linear-gradient(top,#ee465a,#c11a39);
+background-image: linear-gradient(to bottom,#ee465a,#c11a39);
+border-color: rgba(0,0,0,.2);
+border-bottom-color: rgba(0,0,0,.4);
+text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
