@@ -2,7 +2,7 @@
       <div class="large-12 columns">
      <%= link_to 'New Picture', new_picture_path %>
 
-        
+
         <div class="margin"></div>
         <h1>Welcome to Foundation</h1>
       </div>
@@ -54,90 +54,17 @@
       <div class="medium-10 columns">
 
           <ul class="small-block-grid-3">
+            <% @pictures.each do |picture| %>
             <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/1" />
+                    <img class="th" src="http://lorempixel.com/400/300/<%= picture.picture_url %>" />
                     <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="show.html" class="uk-button">Read More</a>
+                        <h2><%= picture.title %></h2>
+                        <p><%= picture.description %></p>
+                        <%= link_to 'Read More', picture_path(picture), class: "uk-button" %>
                     </div>
                 </div>
             </li>
-            <li><div class="view view-sixth">
-                    <img class="th"  src="http://lorempixel.com/400/300/sports/2" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-            <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/3" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-
-           <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/4" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-           <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/5" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-            <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/6" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-
-
-            <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/7" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-            <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/8" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
-           <li><div class="view view-sixth">
-                    <img class="th" src="http://lorempixel.com/400/300/sports/9" />
-                    <div class="mask">
-                        <h2>Hover Style #6</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <a href="#" class="uk-button">Read More</a>
-                    </div>
-                </div>
-            </li>
+            <% end %>
           </ul>
 
        </div>
