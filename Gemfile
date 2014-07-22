@@ -14,6 +14,7 @@ gem 'thin'
 gem 'devise'
 gem 'kaminari'
 gem 'faker'
+gem 'foundation-icons-sass-rails'
 
 
 group :development do

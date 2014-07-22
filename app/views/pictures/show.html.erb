@@ -1,24 +1,81 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+      <div class="large-12 columns">
 
-<p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
-</p>
+        <div class="margin"></div>
+        <h1>Welcome to Foundation</h1>
+      </div>
+    </div>
+    
+    <div class="row">
 
-<p>
-  <strong>Description:</strong>
-  <%= @picture.description %>
-</p>
+      
+      <div class="medium-6 columns">
 
-<p>
-  <strong>Picture url:</strong>
-  <%= @picture.picture_url %>
-</p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @picture.artist %>
-</p>
+      	<div id="#picture">
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+         <img class="th" src="http://lorempixel.com/400/300/<%= @picture.picture_url %>" />
+	      
+      </div><!-- #picture --><br>
+
+
+
+
+
+
+
+      <div class="links">
+        <ul class="inline-list">
+          <li><%= link_to 'Back', pictures_path, class: 'uk-button uk-button-success' %></li>
+          <li><%= link_to 'Edit', edit_picture_path(@picture), class: 'uk-button uk-button-primary'  %></li>
+          <li><%= link_to 'Like', edit_picture_path(@picture), class: 'uk-button like'  %></a></li>
+          <li><a class="uk-button uk-button-danger" href="">Delete</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="medium-6 columns">
+
+        <h3><%= @picture.title %></h3>
+        <p><em>by</em><%= @picture.artist %></p>
+        <p>Added on 2014, Jul 14 </p>
+        <p><%= @picture.description %></p>   
+        
+        <hr>
+
+        <h3>Reviews</h3>
+
+ 
+          <a href="" class="button success tiny right round" id="add_review">Add a Review</a>
+    
+          <div class="clearfix"></div>
+
+        <div id="review" style="display:none">
+            <form>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>Title
+                    <input type="text" placeholder="" />
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>Message
+                    <input type="text" placeholder="large-4.columns" />
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <input type="submit" value="Add Review" class="uk-button right" />
+               </div>
+              </div>
+             </form>
+         </div>
+
+      </div>
+
+</div><!--row-->
+
+

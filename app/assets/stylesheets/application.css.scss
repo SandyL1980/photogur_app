@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ @import 'foundation-icons';
+
 $margin: 5%;
 
 section {
@@ -75,7 +77,9 @@ section {
   border-radius: 10px;
 }
 
-
+.button.like {
+  color: red;
+}
 
 .uk-button {
 display: inline-block;
