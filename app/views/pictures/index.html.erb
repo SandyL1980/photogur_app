@@ -65,13 +65,14 @@
 
       <div class="medium-10 columns">
 
-          <ul class="small-block-grid-3">
-            <% @pictures_per_category.each do |picture| %>
+          <ul class="small-block-grid-3 pictures">
+            <% @pictures.each do |picture| %>
             <li><div class="view view-sixth">
                     <img class="th" src="http://lorempixel.com/400/300/<%= picture.picture_url %>" />
                     <div class="mask">
-                        <h2><%= picture.title %></h2>
-                        <p><%= picture.description %></p>
+                        <h4><%= picture.title %></h4>
+                        <p><strong><%= picture.category.name %></strong></p>
+                        <p><%= truncate(picture.description, length: 20) %></p>
                         <%= link_to 'Read More', picture_path(picture), class: "uk-button" %>
                     </div>
                 </div>

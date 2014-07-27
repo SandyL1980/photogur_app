@@ -4,15 +4,17 @@ class CategoriesController < ApplicationController
   # GET /cuisines
   # GET /cuisines.json
   def index
-    @categories = Category.all
+s
   end
 
   # GET /cuisines/1
   # GET /cuisines/1.json
   def show
+    @categories = Category.all
     @category = Category.find(params[:id])
     @pictures_per_category = @category.pictures
-  end
+
+  end 
 
   # GET /cuisines/new
   def new

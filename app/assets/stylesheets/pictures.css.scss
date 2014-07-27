@@ -1,3 +1,29 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.links {
+	a {		
+		color: #fff;
+				&:visited {
+				 color: #fff;
+				}	
+
+				&.like {
+					color: #d32c46;
+				}	
+	   }
+}
+
+.pictures {
+	strong {
+		color:#333;
+		font-size: 18px;
+	}
+
+	h4 {
+		color: #ccc;
+	}
+}
+

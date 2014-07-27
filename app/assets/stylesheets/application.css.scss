@@ -82,26 +82,31 @@ section {
 }
 
 .uk-button {
-display: inline-block;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-vertical-align: middle;
-text-decoration: none;
-text-align: center;
-border: none;
-line-height: 28px;
-min-height: 30px;
-font-size: 1rem;
-padding: 0 12px;
-background: #f7f7f7;
-color: #666;
-border: 1px solid rgba(0,0,0,.2);
-border-bottom-color: rgba(0,0,0,.3);
-background-origin: border-box;
-background-image: -webkit-linear-gradient(top,#fff,#eee);
-background-image: linear-gradient(to bottom,#fff,#eee);
-border-radius: 4px;
-text-shadow: 0 1px 0 #fff;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  line-height: 28px;
+  min-height: 30px;
+  font-size: 1rem;
+  padding: 0 12px;
+  background: #f7f7f7;
+  color: #666;
+  border: 1px solid rgba(0,0,0,.2);
+  border-bottom-color: rgba(0,0,0,.3);
+  background-origin: border-box;
+  background-image: -webkit-linear-gradient(top,#fff,#eee);
+  background-image: linear-gradient(to bottom,#fff,#eee);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 #fff;
+  
+      &:hover {
+         color: #000!important;
+    
+     }
 }
 
 .uk-button-primary {

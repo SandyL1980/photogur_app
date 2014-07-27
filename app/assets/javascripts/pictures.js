@@ -3,7 +3,6 @@ $(document).ready(function() {
 	var link = $('.side-nav').find('li');
 
 	link.on('click',function(e){
-		e.preventDefault();
 		link.removeClass('green');
 		$(this).addClass('green');
 	});
@@ -14,4 +13,13 @@ $(document).ready(function() {
 
         $('#review').slideToggle();
     });
+
+
+	$('.like').on('click', function(e){
+		e.preventDefault();
+		$('.like').text(' Thank You!')
+		$('.like').css('font-size', '12px')
+
+	});
+    
 });
