@@ -17,8 +17,8 @@ $(document).ready(function() {
 
 	$('.like').on('click', function(e){
 		e.preventDefault();
-		$('.like').text(' Thank You!')
-		$('.like').css('font-size', '12px')
+		$('.like').text(' Thank You!');
+		$('.like').css('font-size', '12px');
 
 	});
     
