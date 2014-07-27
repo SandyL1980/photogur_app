@@ -54,11 +54,16 @@
       <div class="medium-2 columns">
 
         <ul class="side-nav category">
-
-        <% @categories.each do |category| %>
-
-          <li><%= link_to category.name, category_path(category) %></li>
-         <% end %>
+          <li class="green"><a href="#">Nature</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">City</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Technics</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Animals</a></li>
+          <li><a href="#">Abstract</a></li>
+          <li><a href="#">Nightlife</a></li>
         </ul>
 
       </div>
@@ -66,7 +71,7 @@
       <div class="medium-10 columns">
 
           <ul class="small-block-grid-3">
-            <% @pictures_per_category.each do |picture| %>
+            <% @pictures.each do |picture| %>
             <li><div class="view view-sixth">
                     <img class="th" src="http://lorempixel.com/400/300/<%= picture.picture_url %>" />
                     <div class="mask">
@@ -82,5 +87,6 @@
        </div>
     
     </div><!-- row  -->
+
 
 
