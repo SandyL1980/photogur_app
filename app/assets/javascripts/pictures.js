@@ -15,11 +15,29 @@ $(document).ready(function() {
     });
 
 
-	$('.like').on('click', function(e){
+	$('#vote_btn').on('click', function(e){
 		e.preventDefault();
-		$('.like').text(' Thank You!');
-		$('.like').css('font-size', '12px');
+		$('#vote_btn').attr('value', ' ♥ Thank You!');
+		$('#vote_btn').css('font-size', '12px');
+		$('#vote_btn').css('border', '12px');
 
 	});
+
+
+	//number of likes animation
+
+	var n_likes = $('#likes');
+	var likes = $('#likes').attr('data-likes');
+	 
+  jQuery({someValue: 0}).animate({someValue: parseInt(likes)}, {
+    duration: 1000,
+    easing:'swing', // can be anything
+    step: function() { // called on every step
+      // Update the element's text with rounded-up value:
+      n_likes.text(Math.ceil(this.someValue)+ " ♥ Likes");
+      n_likes.css('color', 'red');
+      n_likes.css('font-size','18px');
+   	}
+  });
     
 });

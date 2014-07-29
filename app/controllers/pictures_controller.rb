@@ -52,6 +52,17 @@ class PicturesController < ApplicationController
     end
   end
 
+  def vote_up
+    @picture = Picture.find(params[:id])
+    current_user.vote_for(@picture)
+    voter.vote_for(@picture)
+    respond_to do |format|
+      format.js
+    end
+  
+end
+
+
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy

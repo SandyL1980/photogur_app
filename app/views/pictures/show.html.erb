@@ -23,8 +23,13 @@
       <div class="links">
         <ul class="inline-list">
           <li><%= link_to 'Back', pictures_path, class: 'uk-button uk-button-success' %></li>
-          <li><%= link_to 'Edit', edit_picture_path(@picture), class: 'uk-button uk-button-primary'  %></li>
-          <li><%= link_to ' Like', "#", class: 'uk-button like fi-heart'  %></a></li>
+          <li><%= link_to 'Edit', edit_picture_path(@picture), class: 'uk-button uk-button-primary t'  %></li>
+         <% if current_user %>
+          <li><%=button_to ' ♥ Like ', vote_up_picture_path(@picture), class: 'uk-button like', id: 'vote_btn', :remote => true %></li>        
+          <% else %>
+           <li>Please <%= link_to "Log In", new_user_session_path %> to like this picture</li>
+
+        <% end %>
           <li><a class="uk-button uk-button-danger" href="">Delete</a></li>
         </ul>
       </div>
@@ -38,6 +43,12 @@
         <p><%= @picture.description %></p>   
         
         <hr>
+
+        <div id="likes" data-likes>
+
+          <h2><%= @picture.votes.size %></h2>
+
+        </div>
 
         <h3>Reviews</h3>
 
@@ -69,6 +80,21 @@
               </div>
              </form>
          </div>
+
+    
+
+        <p>No review yet</p> 
+        <% if current_user %>            
+          <% else %>
+           <li>Please <%= link_to "Log In", new_user_session_path %> to leave a comment</li>
+        <% end %>
+
+
+
+    
+    
+    <hr>
+
 
       </div>
 

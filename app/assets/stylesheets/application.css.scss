@@ -17,6 +17,7 @@
  @import 'foundation-icons';
 
 $margin: 5%;
+$like_btn : rgba(231, 76, 60,1);
 
 section {
 	margin:0;
@@ -56,8 +57,9 @@ section {
 
   
 
-.fi-heart {
-  color: rgba(231, 76, 60,1);
+input.like[value] {
+  color: $like_btn;
+  border: 1px solid $like_btn;
   font-size:1rem;
   margin: 0 0 0 6px;
 }
