@@ -13,12 +13,15 @@
  *= require_tree .
  *= require_self
  *= require jquery.bxslider
+ *= require font-awesome
  */
 
- @import 'foundation-icons';
+@import 'foundation-icons';
+@import "font-awesome";
 
 $margin: 5%;
 $like_btn : rgba(231, 76, 60,1);
+
 
 section {
 	margin:0;

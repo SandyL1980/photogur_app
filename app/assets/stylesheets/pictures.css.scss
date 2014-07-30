@@ -2,20 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+$cloud: #ecf0f1;
+$silver: #bdc3c7;
 
 .welcome {
   background: #ccc;
   height: 100px;
   position: relative;
+
+  	span.absolute {
+  		position: absolute;
+  		bottom: 100px;
+  		left: 45%;
+  		width: 89px;
+  		
+  		a {
+  			font-size: 8em;
+  			color: $cloud;
+  			transition: all .5s;
+	  			&:hover {
+	  				color:$silver;
+	  			}
+  		}
+  	}
+
+	  .bxslider {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	}
 }
 
-.bxslider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
+
+
 
 .links {
 	a {		

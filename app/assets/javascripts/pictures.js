@@ -9,7 +9,7 @@ $(document).ready(function() {
   	$('.bxslider').bxSlider({
   		mode: 'fade',
 	  	auto: true,
-	  	controls: false,
+	  	controls: true,
 	  	pager: false,
 	  	autoControls: false,
   	 	pause: 5000
