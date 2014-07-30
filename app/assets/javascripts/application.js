@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= jquery.bxslider.min.js
 //= require turbolinks
 //= require foundation
 //= require_tree .

@@ -1,5 +1,18 @@
 
 $(document).ready(function() {
+	var height = $(window).height();	
+    $('.welcome').css('height', height);
+
+    $(document).ready(function(){
+  		$('.bxslider').bxSlider();
+  		mode: 'fade',
+	  	auto: true,
+	  	controls: false,
+	  	pager: false,
+	  	autoControls: false,
+  	 	pause: 3000
+	});
+
 	var link = $('.side-nav').find('li');
 
 	link.on('click',function(e){
@@ -29,14 +42,14 @@ $(document).ready(function() {
 	var n_likes = $('#likes');
 	var likes = $('#likes').attr('data-likes');
 	 
-  jQuery({someValue: 0}).animate({someValue: parseInt(likes)}, {
-    duration: 1000,
-    easing:'swing', // can be anything
-    step: function() { // called on every step
+  	jQuery({someValue: 0}).animate({someValue: parseInt(likes)}, {
+    	duration: 1000,
+    	easing:'swing', // can be anything
+    	step: function() { // called on every step
       // Update the element's text with rounded-up value:
-      n_likes.text(Math.ceil(this.someValue)+ " ♥ Likes");
-      n_likes.css('color', 'red');
-      n_likes.css('font-size','18px');
+      	n_likes.text(Math.ceil(this.someValue)+ " ♥ Likes");
+      	n_likes.css('color', 'red');
+      	n_likes.css('font-size','18px');
    	}
   });
     

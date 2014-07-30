@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.bxslider
  */
 
  @import 'foundation-icons';
@@ -22,6 +23,7 @@ $like_btn : rgba(231, 76, 60,1);
 section {
 	margin:0;
 }
+
 
 
 #slider {
