@@ -1,17 +1,19 @@
 
 $(document).ready(function() {
-	var height = $(window).height();	
+	var height = $(window).height();
+	var width = $(window).width();	
     $('.welcome').css('height', height);
+    $('.bxslider').children().children().css('height', height);
+ 
 
-    $(document).ready(function(){
-  		$('.bxslider').bxSlider();
+  	$('.bxslider').bxSlider({
   		mode: 'fade',
 	  	auto: true,
 	  	controls: false,
 	  	pager: false,
 	  	autoControls: false,
-  	 	pause: 3000
-	});
+  	 	pause: 5000
+	  });
 
 	var link = $('.side-nav').find('li');
 
