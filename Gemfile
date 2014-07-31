@@ -15,7 +15,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'faker'
 gem 'foundation-icons-sass-rails'
-gem 'thumbs_up'
+gem 'thumbs_up', git: 'https://github.com/bouchard/thumbs_up.git'
 gem "font-awesome-rails"
 
 group :development do
