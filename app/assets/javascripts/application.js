@@ -13,13 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= jquery.bxslider.min.js
-//= require animate
 //= require foundation
-
+//= require animate
 //= require_tree .
 
 $(function() {
   $(document).foundation();
 });
+
+
 
 
