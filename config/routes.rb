@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root to: 'pictures#index'
+  
+
   resources :reviews
 
-  root to: 'pictures#index'
-
+  resources :users
   devise_for :users
 
   resources :pictures do
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
 	 end
 
   resources :categories
-  resources :users
+ 
 
   
 end
